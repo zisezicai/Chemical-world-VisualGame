@@ -1,0 +1,27 @@
+[gd_scene format=3 uid="uid://cm6cr3q8js6dr"]
+
+[ext_resource type="Texture2D" uid="uid://b0ji2b14g6ohj" path="res://Assets/door.png" id="1_2q4pn"]
+[ext_resource type="Script" uid="uid://bmmg4okh7xsam" path="res://Scripts/GotoButton.cs" id="2_efio3"]
+
+[node name="Setting" type="Control" unique_id=1389248501]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="goBack" type="TextureButton" parent="." unique_id=727184656]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.035
+anchor_top = 0.062000003
+anchor_right = 0.035
+anchor_bottom = 0.062000003
+offset_right = 40.0
+offset_bottom = 40.0
+texture_normal = ExtResource("1_2q4pn")
+ignore_texture_size = true
+stretch_mode = 0
+script = ExtResource("2_efio3")
+targetScene = "MainMenu"

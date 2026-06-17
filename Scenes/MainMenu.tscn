@@ -1,0 +1,95 @@
+[gd_scene format=3 uid="uid://dqms2am3o8iqr"]
+
+[ext_resource type="Texture2D" uid="uid://d2ef0itkd7ho5" path="res://Assets/tool_wrench.png" id="1_853f1"]
+[ext_resource type="Script" uid="uid://d3dkeeawxrmxm" path="res://Scripts/MainMenu/NewGame.cs" id="1_ghw46"]
+[ext_resource type="Script" uid="uid://bmmg4okh7xsam" path="res://Scripts/GotoButton.cs" id="2_8saeu"]
+[ext_resource type="Script" uid="uid://dkgeomt6vlvcx" path="res://Scripts/MainMenu/LoadSave.cs" id="2_df05h"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_ghw46"]
+font_size = 120
+
+[sub_resource type="LabelSettings" id="LabelSettings_df05h"]
+
+[node name="MainMenu" type="Control" unique_id=1423876559]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="title" type="Label" parent="." unique_id=1972436464]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.11
+anchor_top = 0.093
+anchor_right = 0.89
+anchor_bottom = 0.383
+text = "化学世界"
+label_settings = SubResource("LabelSettings_ghw46")
+horizontal_alignment = 1
+
+[node name="sentence" type="Label" parent="title" unique_id=1259825329]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.4
+anchor_top = 0.795
+anchor_right = 0.6
+anchor_bottom = 1.0
+text = "从原子到星辰"
+label_settings = SubResource("LabelSettings_df05h")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="newGame" type="Button" parent="." unique_id=1721431642]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.4
+anchor_top = 0.444
+anchor_right = 0.6
+anchor_bottom = 0.52900004
+offset_bottom = 0.2079773
+text = "新游戏"
+script = ExtResource("1_ghw46")
+
+[node name="loadSave" type="Button" parent="." unique_id=686850368]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.4
+anchor_top = 0.444
+anchor_right = 0.6
+anchor_bottom = 0.52900004
+offset_left = 0.19998169
+offset_top = 82.287994
+offset_right = 0.2000122
+offset_bottom = 82.49597
+text = "加载存档"
+script = ExtResource("2_df05h")
+
+[node name="multiplayer" type="Button" parent="." unique_id=1476800578]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.4
+anchor_top = 0.444
+anchor_right = 0.6
+anchor_bottom = 0.52900004
+offset_left = 0.19998169
+offset_top = 167.288
+offset_right = 0.2000122
+offset_bottom = 167.49597
+text = "多人游戏"
+
+[node name="button" type="TextureButton" parent="." unique_id=330346605]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.933
+anchor_top = 0.87700003
+anchor_right = 0.933
+anchor_bottom = 0.87700003
+offset_right = 40.0
+offset_bottom = 40.0
+texture_normal = ExtResource("1_853f1")
+ignore_texture_size = true
+stretch_mode = 0
+script = ExtResource("2_8saeu")
+targetScene = "Setting"
