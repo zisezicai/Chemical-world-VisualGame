@@ -1,7 +1,7 @@
 using Godot;
 using System;
 
-public partial class LoadSave : Button
+public partial class FinishButton : Button
 {
 	// Called when the node enters the scene tree for the first time.
 	public override void _Ready()
@@ -15,6 +15,8 @@ public partial class LoadSave : Button
 	}
 	public void onPressed()
 	{
-		GetTree().ChangeSceneToFile("res://Scenes/ChooseSave.tscn");
+		SaveManager.createSave(Item.playerNameItem.GetNode<LineEdit>("value").Text);
+		GD.Print(SaveManager.Instance.playerName);
+		GetTree().ChangeSceneToFile("res://Scenes/StartingArea.tscn");
 	}
 }

@@ -1,0 +1,21 @@
+[gd_scene format=3 uid="uid://bgnqh31dm34j3"]
+
+[ext_resource type="Script" uid="uid://c2jcje8prm5bq" path="res://scripts/ChooseSave/SaveList.cs" id="1_t5oxa"]
+
+[node name="ChooseSave" type="Control" unique_id=1431238859]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="SaveList" type="ItemList" parent="." unique_id=1833679521]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.1
+anchor_right = 0.9
+anchor_bottom = 1.0
+offset_left = -0.20000458
+offset_right = -0.20007324
+script = ExtResource("1_t5oxa")

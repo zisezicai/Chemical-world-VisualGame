@@ -1,5 +1,8 @@
 [gd_scene format=3 uid="uid://b12oqwdgu38g7"]
 
+[ext_resource type="Script" uid="uid://crrbw7x2sudrm" path="res://Scripts/Register/Item.cs" id="1_6uppw"]
+[ext_resource type="Script" uid="uid://5vela3uh2ct4" path="res://Scripts/Register/FinishButton.cs" id="2_6uppw"]
+
 [sub_resource type="LabelSettings" id="LabelSettings_n5her"]
 font_size = 38
 
@@ -21,8 +24,10 @@ anchor_bottom = 1.0
 [node name="item" type="Control" parent="VBoxContainer" unique_id=1703284004]
 custom_minimum_size = Vector2(0, 70)
 layout_mode = 2
+script = ExtResource("1_6uppw")
+itemName = "playerName"
 
-[node name="Label" type="Label" parent="VBoxContainer/item" unique_id=1889081912]
+[node name="key" type="Label" parent="VBoxContainer/item" unique_id=1889081912]
 layout_mode = 1
 anchors_preset = -1
 anchor_right = 0.5
@@ -32,10 +37,20 @@ label_settings = SubResource("LabelSettings_n5her")
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="LineEdit" type="LineEdit" parent="VBoxContainer/item" unique_id=1077176800]
+[node name="value" type="LineEdit" parent="VBoxContainer/item" unique_id=1077176800]
 layout_mode = 1
 anchors_preset = -1
 anchor_left = 0.5
 anchor_right = 1.0
 anchor_bottom = 1.0
 alignment = 1
+
+[node name="finishButton" type="Button" parent="." unique_id=2016868711]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.4
+anchor_top = 0.8
+anchor_right = 0.6
+anchor_bottom = 0.9
+text = "完成"
+script = ExtResource("2_6uppw")

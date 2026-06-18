@@ -1,0 +1,18 @@
+[gd_scene format=3 uid="uid://d0stn1em4cxb0"]
+
+[ext_resource type="Script" uid="uid://cf1b4mxha1cx1" path="res://Scripts/Game/Player/Player.cs" id="1_pvs5k"]
+
+[node name="StartingArea" type="Node2D" unique_id=1722413659]
+
+[node name="TileMapLayer" type="TileMapLayer" parent="." unique_id=115452524]
+
+[node name="player" type="Sprite2D" parent="." unique_id=256096153]
+script = ExtResource("1_pvs5k")
+
+[node name="mainCamera" type="Camera2D" parent="player" unique_id=417156716]
+
+[node name="nameLabel" type="Label" parent="player/mainCamera" unique_id=1119287878]
+offset_left = -554.0
+offset_top = -308.0
+offset_right = -514.0
+offset_bottom = -285.0
