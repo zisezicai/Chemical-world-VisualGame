@@ -2,6 +2,8 @@
 
 [ext_resource type="Script" uid="uid://crrbw7x2sudrm" path="res://Scripts/Register/Item.cs" id="1_6uppw"]
 [ext_resource type="Script" uid="uid://5vela3uh2ct4" path="res://Scripts/Register/FinishButton.cs" id="2_6uppw"]
+[ext_resource type="Script" uid="uid://cowpm2d7vwww1" path="res://Scripts/Register/ValueEditor.cs" id="2_b11tx"]
+[ext_resource type="Texture2D" uid="uid://bnvgcu4iaqe00" path="res://Assets/warning.png" id="3_qlonu"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_n5her"]
 font_size = 38
@@ -44,6 +46,17 @@ anchor_left = 0.5
 anchor_right = 1.0
 anchor_bottom = 1.0
 alignment = 1
+script = ExtResource("2_b11tx")
+
+[node name="warning" type="TextureRect" parent="VBoxContainer/item" unique_id=1340404766]
+visible = false
+layout_mode = 1
+anchors_preset = -1
+anchor_right = 0.053000003
+anchor_bottom = 1.0
+texture = ExtResource("3_qlonu")
+expand_mode = 1
+stretch_mode = 5
 
 [node name="finishButton" type="Button" parent="." unique_id=2016868711]
 layout_mode = 1

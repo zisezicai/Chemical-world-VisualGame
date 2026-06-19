@@ -8,11 +8,6 @@ public partial class FinishButton : Button
 	{
 		this.Pressed += onPressed;
 	}
-
-	// Called every frame. 'delta' is the elapsed time since the previous frame.
-	public override void _Process(double delta)
-	{
-	}
 	public void onPressed()
 	{
 		SaveManager.createSave(Item.playerNameItem.GetNode<LineEdit>("value").Text);

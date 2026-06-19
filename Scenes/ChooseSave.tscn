@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://bgnqh31dm34j3"]
 
-[ext_resource type="Script" uid="uid://c2jcje8prm5bq" path="res://scripts/ChooseSave/SaveList.cs" id="1_t5oxa"]
+[ext_resource type="Script" uid="uid://c2jcje8prm5bq" path="res://Scripts/ChooseSave/SaveList.cs" id="1_t5oxa"]
 
 [node name="ChooseSave" type="Control" unique_id=1431238859]
 layout_mode = 3
