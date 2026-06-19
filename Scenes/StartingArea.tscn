@@ -1,6 +1,8 @@
 [gd_scene format=3 uid="uid://d0stn1em4cxb0"]
 
 [ext_resource type="Script" uid="uid://cf1b4mxha1cx1" path="res://Scripts/Game/Player/Player.cs" id="1_pvs5k"]
+[ext_resource type="Texture2D" uid="uid://b0ji2b14g6ohj" path="res://Assets/door.png" id="2_883hh"]
+[ext_resource type="Script" uid="uid://h1rbiodr80pp" path="res://Scripts/Game/UI/LeaveButton.cs" id="3_883hh"]
 
 [node name="StartingArea" type="Node2D" unique_id=1722413659]
 
@@ -12,7 +14,15 @@ script = ExtResource("1_pvs5k")
 [node name="mainCamera" type="Camera2D" parent="player" unique_id=417156716]
 
 [node name="nameLabel" type="Label" parent="player/mainCamera" unique_id=1119287878]
-offset_left = -554.0
-offset_top = -308.0
-offset_right = -514.0
-offset_bottom = -285.0
+offset_left = -550.0
+offset_top = -300.0
+offset_right = -510.0
+offset_bottom = -277.0
+
+[node name="leave" type="TextureButton" parent="player/mainCamera" unique_id=1525293722]
+offset_left = -552.0
+offset_top = -250.0
+offset_right = -512.0
+offset_bottom = -210.0
+texture_normal = ExtResource("2_883hh")
+script = ExtResource("3_883hh")
