@@ -34,7 +34,7 @@ We also recommend installing Visual Studio 2022 or Visual Studio 2026 for C# dev
   A lightweight file operation stream tool.
 
 - [zisezicai](https://zisezicai.github.io/)  
-  The personal website zisezicai.
+  The personal website of zisezicai.
    
 - [Chemical-world](https://github.com/CodeJ-40404/Chemical-world)  
   The early C++ version of this game.
