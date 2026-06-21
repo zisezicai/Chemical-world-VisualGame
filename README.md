@@ -27,11 +27,14 @@ We also recommend installing Visual Studio 2022 or Visual Studio 2026 for C# dev
 
 ## Special Thanks & Links
 
-- [Godot](https://github.com/godotengine/godot)
+- [Godot](https://github.com/godotengine/godot)  
+  The game engine used by this project.
 
 - [cfstream](https://github.com/weigao-china/cfstream)
+  A lightweight file operation stream tool.
 
 - [zisezicai](https://zisezicai.github.io/)
-
+  The personal website zisezicai.
+   
 - [Chemical-world](https://github.com/CodeJ-40404/Chemical-world)  
   The early C++ version of this game.
