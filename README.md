@@ -1,21 +1,37 @@
-# CHEMICAL-WORLD-VISUAL-GAME 🧪
-A C# & [Godot](https://github.com/godotengine/godot) based game
+# Chemical World Visual Game 🧪
 
-[中文README](README.zh-CN.md)
+A chemistry-themed game built with C# and [Godot](https://github.com/godotengine/godot).
 
-## introduction
-This game is a hard-core game, which is very difficult but worth to play. It's based on Chemistry, Industry and Astronautics  
-The purpose is to be **as realistic as we can**, **no magic crafting**
+[中文 README](README.zh-CN.md)
 
-## HOW TO RUN
-you need to install Godot, we recommend you to install Visual Studio 2022/2026 too
+## Introduction
 
-## TODO list
-- design/import the C# - C++ connection API (C# isn't very fast, so some functions and API requierd it)
-- finish the tutorial and the basic things
+**Chemical World Visual Game** is a hardcore game based on chemistry, industry, and aerospace engineering.
 
-## SPECIAL THX & friends URL
-[GODOT](https://github.com/godotengine/godot)  
-[cfstream](https://github.com/weigao-china/cfstream)  
-[zisezicai](https://zisezicai.github.io)  
-[Chemical-world](https://github.com/CodeJ-40404/Chemical-world) --the early c++ version of this game  
+The game is designed to be challenging, but it is also worth playing for players who enjoy realistic systems and technical gameplay.
+
+Our goal is to make the game as realistic as possible. Instead of using magic-style crafting, the game tries to build its mechanics around real chemical, industrial, and engineering concepts.
+
+## How to Run
+
+To run this project, you need to install [Godot](https://github.com/godotengine/godot).
+
+We also recommend installing Visual Studio 2022 or Visual Studio 2026 for C# development.
+
+## TODO List
+
+- Design or import the connection API between C# and C++.
+  Some performance-critical systems may need to be implemented in C++.
+
+- Finish the tutorial and basic gameplay content.
+
+## Special Thanks & Links
+
+- [Godot](https://github.com/godotengine/godot)
+
+- [cfstream](https://github.com/weigao-china/cfstream)
+
+- [zisezicai](https://zisezicai.github.io/)
+
+- [Chemical-world](https://github.com/CodeJ-40404/Chemical-world)  
+  The early C++ version of this game.
