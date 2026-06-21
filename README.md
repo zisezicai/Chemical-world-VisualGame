@@ -1,6 +1,8 @@
 # CHEMICAL-WORLD-VISUAL-GAME 🧪
 A C# & [Godot](https://github.com/godotengine/godot) based game
 
+[中文README](README.zh-CN.md)
+
 ## introduction
 This game is a hard-core game, which is very difficult but worth to play. It's based on Chemistry, Industry and Astronautics  
 The purpose is to be **as realistic as we can**, **no magic crafting**
