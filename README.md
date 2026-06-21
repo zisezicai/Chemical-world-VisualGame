@@ -15,3 +15,5 @@ you need to install Godot, we recommend you to install Visual Studio 2022/2026 t
 ## SPECIAL THX & friends URL
 [GODOT](https://github.com/godotengine/godot)  
 [cfstream](https://github.com/weigao-china/cfstream)
+[zisezicai](https://zisezicai.github.io)
+[Chemical-world](https://github.com/CodeJ-40404/Chemical-world) --the early c++ version of this game
