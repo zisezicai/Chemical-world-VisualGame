@@ -1,2 +1,7 @@
 # Normalize EOL for all files that Git considers text files.
 * text=auto eol=lf
+*.cpp linguist-language=C++
+*.c linguist-language=C
+*.cs linguist-language=C#
+*.md linguist-detectable=true
+*.md linguist-documentation=false
