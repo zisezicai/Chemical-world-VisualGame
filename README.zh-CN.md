@@ -36,5 +36,5 @@
 * [zisezicai](https://zisezicai.github.io/)  
   zisezicai的个人网站
   
-* [Chemical-world](https://github.com/CodeJ-40404/Chemical-world)
+* [Chemical-world](https://github.com/CodeJ-40404/Chemical-world)  
   本游戏早期的 C++ 版本。
