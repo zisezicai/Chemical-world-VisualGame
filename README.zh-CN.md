@@ -27,11 +27,14 @@
 
 ## 特别感谢与相关链接
 
-* [Godot](https://github.com/godotengine/godot)
+* [Godot](https://github.com/godotengine/godot)  
+  本项目使用的游戏引擎。
+  
+* [cfstream](https://github.com/weigao-china/cfstream)  
+  一个轻量级的文件操作流工具
 
-* [cfstream](https://github.com/weigao-china/cfstream)
-
-* [zisezicai](https://zisezicai.github.io/)
-
+* [zisezicai](https://zisezicai.github.io/)  
+  zisezicai的个人网站
+  
 * [Chemical-world](https://github.com/CodeJ-40404/Chemical-world)
   本游戏早期的 C++ 版本。
