@@ -1,53 +1,47 @@
 using Godot;
 using System;
 
-public partial class Player : AnimatedSprite2D
+public partial class Player : CharacterBody2D
 {
-	public int speed=>10;
+	public int speed=>500;
+
+	private AnimatedSprite2D animSprite;
+	private Vector2 inputDirection;
+
 	public override void _Ready()
 	{
+		animSprite=GetNode<AnimatedSprite2D>("appearance");
 		this.GetNode<Label>("mainCamera/nameLabel").Text=SaveManager.Instance.playerName;
 	}
 
 	// Called every frame. 'delta' is the elapsed time since the previous frame.
 	public override void _Process(double delta)
 	{
-		move();
+		inputDirection = Input.GetVector("left", "right", "up", "down");
+		UpdateAnimation();
 	}
 
-	public void move()//移动的逻辑
+	public override void _PhysicsProcess(double delta)
 	{
-		if (Input.IsActionPressed("up"))
+		Velocity = inputDirection * speed;
+		MoveAndSlide();
+	}
+
+	private void UpdateAnimation()
+	{
+		if (inputDirection == Vector2.Zero)
 		{
-			// if(Input.IsActionJustPressed("up")){//只在第一帧开始播
-				this.Play("up");
-			// }
-			this.Position += new Vector2(0, -speed);
+			animSprite.Pause();
+			return;
 		}
-		else if (Input.IsActionPressed("down"))
+		//播放动画
+		if (Mathf.Abs(inputDirection.X) > Mathf.Abs(inputDirection.Y))
 		{
-			// if(Input.IsActionJustPressed("down")){
-				this.Play("down");
-			// }
-			this.Position += new Vector2(0, speed);
-		}
-		else if (Input.IsActionPressed("left"))
-		{
-			// if(Input.IsActionJustPressed("left")){
-				this.Play("left");
-			// }
-			this.Position += new Vector2(-speed, 0);
-		}
-		else if (Input.IsActionPressed("right"))
-		{
-			// if(Input.IsActionJustPressed("right")){
-				this.Play("right");
-			// }
-			this.Position += new Vector2(speed, 0);
+			animSprite.Play(inputDirection.X > 0 ? "right" : "left");
 		}
 		else
 		{
-			this.Pause();
+			animSprite.Play(inputDirection.Y > 0 ? "down" : "up");
 		}
 	}
 }
