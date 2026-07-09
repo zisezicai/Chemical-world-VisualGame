@@ -1,0 +1,39 @@
+[gd_scene format=3 uid="uid://dvw2kdygjer72"]
+
+[ext_resource type="Script" uid="uid://d1pxft44qn4fy" path="res://Scripts/Game/StartArea/doors/BuildGlassDoor.cs" id="1_mwv74"]
+[ext_resource type="Texture2D" uid="uid://dln2n0ndujobn" path="res://Assets/shop/door_left.png" id="2_0fbx7"]
+[ext_resource type="Texture2D" uid="uid://cad3vxm7ct45h" path="res://Assets/shop/door_right.png" id="3_d47x1"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_neq1b"]
+size = Vector2(3, 21)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_uncee"]
+size = Vector2(314, 336)
+
+[node name="GlassDoor" type="Node2D" unique_id=1528355888]
+script = ExtResource("1_mwv74")
+
+[node name="left" type="Sprite2D" parent="." unique_id=1217992757]
+position = Vector2(2, -84)
+scale = Vector2(8.000001, 8)
+texture = ExtResource("2_0fbx7")
+
+[node name="StaticBody2D" type="StaticBody2D" parent="left" unique_id=146451557]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="left/StaticBody2D" unique_id=1372847219]
+shape = SubResource("RectangleShape2D_neq1b")
+
+[node name="right" type="Sprite2D" parent="." unique_id=669137373]
+position = Vector2(2, 84)
+scale = Vector2(8, 8)
+texture = ExtResource("3_d47x1")
+
+[node name="StaticBody2D" type="StaticBody2D" parent="right" unique_id=479261972]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="right/StaticBody2D" unique_id=660827214]
+shape = SubResource("RectangleShape2D_neq1b")
+
+[node name="openArea" type="Area2D" parent="." unique_id=1134419443]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="openArea" unique_id=2037408630]
+shape = SubResource("RectangleShape2D_uncee")

@@ -1,0 +1,77 @@
+[gd_scene format=3 uid="uid://44w817lhyicb"]
+
+[ext_resource type="Script" uid="uid://cf1b4mxha1cx1" path="res://Scripts/Game/Player/Player.cs" id="1_uehbv"]
+[ext_resource type="Texture2D" uid="uid://b0ji2b14g6ohj" path="res://Assets/door.png" id="2_x3dxx"]
+[ext_resource type="Script" uid="uid://h1rbiodr80pp" path="res://Scripts/Game/UI/LeaveButton.cs" id="3_u02lp"]
+[ext_resource type="Texture2D" uid="uid://cogfxgffqtfof" path="res://Assets/player.png" id="4_61m26"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_q6mwu"]
+atlas = ExtResource("4_61m26")
+region = Rect2(0, 0, 17, 19)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_o611i"]
+atlas = ExtResource("4_61m26")
+region = Rect2(17, 0, 17, 19)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_tea35"]
+atlas = ExtResource("4_61m26")
+region = Rect2(34, 0, 17, 19)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_3d4ks"]
+atlas = ExtResource("4_61m26")
+region = Rect2(51, 0, 17, 19)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_uncee"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_q6mwu")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_o611i")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_tea35")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_3d4ks")
+}],
+"loop": 1,
+"name": &"go",
+"speed": 8.0
+}]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_fdusf"]
+radius = 70.0
+height = 170.0
+
+[node name="Player" type="CharacterBody2D" unique_id=118486175]
+script = ExtResource("1_uehbv")
+
+[node name="mainCamera" type="Camera2D" parent="." unique_id=1639867933]
+
+[node name="nameLabel" type="Label" parent="mainCamera" unique_id=1922683742]
+offset_left = -550.0
+offset_top = -300.0
+offset_right = -510.0
+offset_bottom = -277.0
+
+[node name="leave" type="TextureButton" parent="mainCamera" unique_id=1577886776]
+offset_left = -552.0
+offset_top = -250.0
+offset_right = -512.0
+offset_bottom = -210.0
+texture_normal = ExtResource("2_x3dxx")
+script = ExtResource("3_u02lp")
+
+[node name="appearance" type="AnimatedSprite2D" parent="." unique_id=1347445926]
+z_index = 10
+texture_filter = 1
+scale = Vector2(8, 8)
+sprite_frames = SubResource("SpriteFrames_uncee")
+animation = &"go"
+autoplay = "go"
+frame = 1
+
+[node name="collision" type="CollisionShape2D" parent="." unique_id=1196147513]
+shape = SubResource("CapsuleShape2D_fdusf")

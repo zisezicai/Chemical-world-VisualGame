@@ -1,0 +1,42 @@
+[gd_scene format=3 uid="uid://dpsrnej5g1i3"]
+
+[ext_resource type="Script" uid="uid://sd7par0uv11p" path="res://Scripts/Game/StartArea/doors/BuildWoodDoor.cs" id="1_e35io"]
+[ext_resource type="Texture2D" uid="uid://bb3s25wtbknii" path="res://Assets/home/door.png" id="2_hwusb"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_uncee"]
+size = Vector2(176, 176)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_neq1b"]
+size = Vector2(176, 16)
+
+[node name="WoodDoor" type="Node2D" unique_id=508590352]
+texture_filter = 1
+script = ExtResource("1_e35io")
+
+[node name="front" type="Area2D" parent="." unique_id=1801210296]
+position = Vector2(1360, 2064)
+
+[node name="collision" type="CollisionShape2D" parent="front" unique_id=2108950962]
+position = Vector2(-1264, -1968)
+shape = SubResource("RectangleShape2D_uncee")
+
+[node name="back" type="Area2D" parent="." unique_id=706089092]
+position = Vector2(1360, 2064)
+
+[node name="collision" type="CollisionShape2D" parent="back" unique_id=1669150309]
+position = Vector2(-1264, -2160)
+shape = SubResource("RectangleShape2D_uncee")
+
+[node name="door" type="Node2D" parent="." unique_id=1801079505]
+
+[node name="appearance" type="Sprite2D" parent="door" unique_id=1411976158]
+position = Vector2(96.00002, 8.000069)
+scale = Vector2(8.000002, 8.000034)
+texture = ExtResource("2_hwusb")
+
+[node name="StaticBody2D" type="StaticBody2D" parent="door" unique_id=1894951121]
+position = Vector2(1376, 2064)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="door/StaticBody2D" unique_id=1252027389]
+position = Vector2(-1280, -2064)
+shape = SubResource("RectangleShape2D_neq1b")

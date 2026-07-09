@@ -1,0 +1,39 @@
+[gd_scene format=3 uid="uid://cu0u1feep23wo"]
+
+[ext_resource type="Script" uid="uid://sd7par0uv11p" path="res://Scripts/Game/StartArea/doors/BuildWoodDoor.cs" id="1_6jw7p"]
+[ext_resource type="Texture2D" uid="uid://bu2rcbe288c5e" path="res://Assets/spaceAgency/door.png" id="2_bnx53"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_b4i5y"]
+size = Vector2(512, 512)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_neq1b"]
+size = Vector2(2, 64)
+
+[node name="spaceAgencyDoor" type="Node2D" unique_id=1865579876]
+script = ExtResource("1_6jw7p")
+
+[node name="front" type="Area2D" parent="." unique_id=2110715842]
+position = Vector2(-17, 2)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="front" unique_id=389873782]
+position = Vector2(-246, 246)
+shape = SubResource("RectangleShape2D_b4i5y")
+
+[node name="back" type="Area2D" parent="." unique_id=750098093]
+position = Vector2(510, 2)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="back" unique_id=549123444]
+position = Vector2(-246, 246)
+shape = SubResource("RectangleShape2D_b4i5y")
+
+[node name="door" type="Node2D" parent="." unique_id=12198023]
+
+[node name="appearance" type="Sprite2D" parent="door" unique_id=1911545613]
+position = Vector2(0, 248)
+scale = Vector2(8, 8)
+texture = ExtResource("2_bnx53")
+
+[node name="StaticBody2D" type="StaticBody2D" parent="door/appearance" unique_id=1719154122]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="door/appearance/StaticBody2D" unique_id=1780504952]
+shape = SubResource("RectangleShape2D_neq1b")
