@@ -2,6 +2,7 @@
 
 [ext_resource type="Script" uid="uid://gg8pgqn72cx7" path="res://Scripts/SpaceTravel/Star/Stars.cs" id="1_tfh4l"]
 [ext_resource type="Script" uid="uid://c8dj67q0kud0v" path="res://Scripts/SpaceTravel/Star/Planet.cs" id="2_r20um"]
+[ext_resource type="Texture2D" uid="uid://nulinhpjpa68" path="res://Assets/stars/earth.png" id="3_mxu2a"]
 [ext_resource type="Texture2D" uid="uid://b5u32iagem4kc" path="res://Assets/stars/A001.png" id="3_tfh4l"]
 [ext_resource type="Script" uid="uid://br820ntdcds17" path="res://Scripts/SpaceTravel/SpaceShip.cs" id="4_kkujb"]
 [ext_resource type="Texture2D" uid="uid://bf772km7xusc2" path="res://Assets/SpaceShip.png" id="5_mxu2a"]
@@ -18,22 +19,37 @@ size = Vector2(58, 57)
 texture_filter = 2
 script = ExtResource("1_tfh4l")
 
-[node name="star" type="Node2D" parent="Stars" unique_id=1899467980]
+[node name="earth" type="Node2D" parent="Stars" unique_id=1275550308]
+position = Vector2(1137, 647)
 script = ExtResource("2_r20um")
 
-[node name="Sprite2D" type="Sprite2D" parent="Stars/star" unique_id=1300906817]
+[node name="Sprite2D" type="Sprite2D" parent="Stars/earth" unique_id=1819481092]
+position = Vector2(-0.499997, 0.49999523)
+scale = Vector2(2.3, 2.3)
+texture = ExtResource("3_mxu2a")
+
+[node name="enterArea" type="Area2D" parent="Stars/earth" unique_id=1015079473]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Stars/earth/enterArea" unique_id=108441058]
+shape = SubResource("CircleShape2D_neq1b")
+debug_color = Color(0, 0.6, 0.69803923, 0.11372549)
+
+[node name="A001" type="Node2D" parent="Stars" unique_id=1899467980]
+script = ExtResource("2_r20um")
+
+[node name="Sprite2D" type="Sprite2D" parent="Stars/A001" unique_id=1300906817]
 position = Vector2(-0.499997, 0.49999523)
 scale = Vector2(2.15, 2.15)
 texture = ExtResource("3_tfh4l")
 
-[node name="enterArea" type="Area2D" parent="Stars/star" unique_id=426389585]
+[node name="enterArea" type="Area2D" parent="Stars/A001" unique_id=426389585]
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Stars/star/enterArea" unique_id=975204493]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Stars/A001/enterArea" unique_id=975204493]
 shape = SubResource("CircleShape2D_neq1b")
 debug_color = Color(0, 0.6, 0.69803923, 0.11372549)
 
 [node name="player" type="CharacterBody2D" parent="." unique_id=120672017]
-position = Vector2(191, 108)
+position = Vector2(1149, 648)
 script = ExtResource("4_kkujb")
 rotationSpeed = 1.0
 
